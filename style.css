@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "poppins", sans-serif;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  background-color: #edf2fc;
+  padding: 2% 3% 4%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  width: 100px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.middle-nav {
+  position: relative;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 30px 10px 0;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #606164;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -10%;
+  left: 0;
+  background: #ff4321;
+  transition: width 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.fa-bars {
+  font-size: 20px;
+  display: none;
+}
+
+.home-info {
+  margin: 150px auto 0;
+  width: 95%;
+}
+
+.home-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-home-info img {
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.home-info h1 {
+  font-size: 70px;
+  color: #212121;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home-info span {
+  color: #ff4321;
+}
+
+.home-info p {
+  color: #333;
+  font-size: 23px;
+}
+
+.home-info p strong {
+  font-weight: 700;
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.home-info a {
+  text-decoration: none;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.home-info button {
+  background-color: #212121;
+  border: none;
+  padding: 10px 18px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px 0;
+  border-radius: 5px;
+}
+
+.home-info .contact {
+  background-color: #ff4321;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.social-link a {
+  color: #606163;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 1100px) {
+  .home-info h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+
+  .home-info span {
+    color: #ff4321;
+  }
+
+  .home-info p {
+    color: #333;
+    line-height: 30px;
+    font-size: 20px;
+  }
+
+  .home-info button {
+    padding: 8px 16px;
+    font-size: 13px;
+    margin: 20px 0;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .social-link a {
+    font-size: 20px;
+    margin-top: -20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    padding: 2% 2%;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  nav ul li a {
+    font-size: 17px;
+  }
+
+  .home-info h1 {
+    font-size: 25px;
+  }
+
+  .home-info p {
+    font-size: 16px;
+  }
+
+  .home-info button {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .social-link a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home-info {
+    margin: 100px auto 0;
+    width: 95%;
+  }
+  .social-link a {
+    font-size: 20px;
+    margin-top: -10px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .fa-bars {
+    font-size: 25px;
+    display: block;
+    margin-right: 10px;
+  }
+
+  .fa-times {
+    font-size: 25px;
+    margin-right: 10px;
+  }
+  .middle-nav {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 70%;
+    background-color: #fff;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 15px;
+  }
+
+  .home-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .home-info button {
+    background-color: #212121;
+    border: none;
+    padding: 4px 7px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: none;
+    margin: 10px 0;
+    border-radius: 3px;
+  }
+}
