@@ -320,12 +320,16 @@ nav ul li a:hover::after {
   .link-btn button {
     background-color: #212121;
     border: none;
-    padding: 4px 7px;
+    padding: 5px 7px;
     color: #fff;
     font-size: 10px;
     font-weight: none;
     margin: 10px 0;
     border-radius: 3px;
+  }
+
+  .social-link a {
+    margin-bottom: 10px;
   }
 }
 /*--------------------home styling end--------------------------*/
@@ -589,6 +593,7 @@ textarea {
   color: var(--secondary-color);
   background-color: transparent;
   font-size: 15px;
+  border-radius: 3px;
 }
 textarea {
   resize: none;
@@ -707,12 +712,12 @@ textarea:valid ~ label {
   }
 
   .left-contact {
-    width: 100%;
+    width: 90%;
     margin-bottom: 30px;
   }
 
   .right-contact {
-    width: 100%;
+    width: 90%;
     margin-top: -40px;
   }
 
@@ -720,8 +725,8 @@ textarea:valid ~ label {
     font-size: 25px;
   }
 
-  .contact-con h1 {
-    padding: 0px;
+  .contact-con {
+    margin-bottom: 10px;
   }
 
   .left-contact p {
@@ -745,7 +750,7 @@ textarea:valid ~ label {
   }
 
   textarea {
-    height: 150px;
+    height: 120px;
   }
 
   input:focus ~ label {
