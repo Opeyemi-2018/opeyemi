@@ -253,7 +253,7 @@ nav ul li a:hover::after {
   }
   .social-link a {
     font-size: 20px;
-    margin-top: -10px;
+    margin-top: 10px;
   }
 }
 
@@ -301,7 +301,7 @@ nav ul li a:hover::after {
 
   nav ul li {
     display: block;
-    margin: 20px;
+    margin: 30px 20px 20px;
   }
 
   .home-flex {
@@ -541,7 +541,6 @@ nav ul li a:hover::after {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
   margin-top: 70px;
 }
 
@@ -555,7 +554,6 @@ nav ul li a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
   width: 100%;
 }
 
@@ -570,7 +568,6 @@ nav ul li a:hover::after {
 
 .right-contact {
   width: 40%;
-  padding: 40px;
 }
 
 form {
@@ -666,14 +663,23 @@ textarea:valid ~ label {
 
 @media screen and (max-width: 1000px) {
   .contact-con {
-    margin: 80px auto 10px;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .left-contact {
+    width: 50%;
+  }
+
+  .right-contact {
+    width: 40%;
   }
 }
 
 @media screen and (max-width: 740px) {
   .contact-con {
-    margin: 60px auto 10px;
+    margin: 60px auto 0px;
     width: 100%;
   }
 
@@ -684,6 +690,15 @@ textarea:valid ~ label {
   .contact-img img {
     width: 300px;
   }
+
+  input,
+  textarea {
+    padding: 8px 5px;
+  }
+
+  textarea {
+    height: 150px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -693,6 +708,7 @@ textarea:valid ~ label {
 
   .left-contact {
     width: 100%;
+    margin-bottom: 30px;
   }
 
   .right-contact {
@@ -726,6 +742,10 @@ textarea:valid ~ label {
     width: 100%;
     padding: 7px;
     font-size: 12px;
+  }
+
+  textarea {
+    height: 150px;
   }
 
   input:focus ~ label {
