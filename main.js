@@ -1,20 +1,39 @@
-let firstLogo = document.getElementById("first-logo");
-let secondLogo = document.getElementById("second-logo");
-
 //js for theme mode
-let moonIcon = document.getElementById("moon-icon");
-moonIcon.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme");
-  if (moonIcon.classList.contains("fa-moon")) {
+// Get the moon icon and the logos
+const moonIcon = document.getElementById("moon-icon");
+const firstLogo = document.getElementById("first-logo");
+const secondLogo = document.getElementById("second-logo");
+
+// Function to set the theme
+const setTheme = (isDark) => {
+  if (isDark) {
+    document.body.classList.add("dark-theme");
     moonIcon.classList.replace("fa-moon", "fa-sun");
     secondLogo.style.display = "block";
     firstLogo.style.display = "none";
   } else {
+    document.body.classList.remove("dark-theme");
     moonIcon.classList.replace("fa-sun", "fa-moon");
     secondLogo.style.display = "none";
     firstLogo.style.display = "block";
   }
-});
+};
+
+// Function to toggle the theme and save to local storage
+const toggleTheme = () => {
+  const isDarkMode = document.body.classList.contains("dark-theme");
+  setTheme(!isDarkMode);
+  localStorage.setItem("isDarkMode", !isDarkMode);
+};
+
+// Event listener for clicking the moon icon
+moonIcon.addEventListener("click", toggleTheme);
+
+// Check local storage for theme preference
+const savedTheme = localStorage.getItem("isDarkMode");
+if (savedTheme !== null) {
+  setTheme(savedTheme === "true");
+}
 
 //s for navbar
 let openBar = document.querySelector(".fa-bars");
@@ -54,7 +73,7 @@ let testimonials = [
   {
     clientName: "Johnpaul. N",
     clientPhoto: "images/johnpaul-2.jpg",
-    text: `"His ability to turn people's vision into reality is remarkable"`,
+    text: `"His ability to turn people's vision into reality is remarkable and excellent"`,
   },
 
   {
